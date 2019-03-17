@@ -1,0 +1,6 @@
+## Interface: 80100
+## Title: GoldTaker
+## Notes: Takes from mailbox only mail that has gold of selected value or lower
+## Version: 1.0
+
+GoldTaker.lua
