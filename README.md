@@ -15,7 +15,7 @@ Phase 2 :: Localization
 Phase 3 :: GUI & SavedVariables
 1. Create SavedVariables file
 2. Build UI frames to display the following:
-2a. Last gold limit set
-2b. Recommended Gold limits based on records found within current mail 
-2c. Buttons to run process
+   - Last gold limit set
+   - Recommended Gold limits based on records found within current mail 
+   - Buttons to run process
 3. Store last gold limit set and record transactions to savedvariables
