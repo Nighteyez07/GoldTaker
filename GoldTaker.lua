@@ -27,21 +27,27 @@ function openAll()
 end
 
 function openMail(index)
-	if index == 0 then return stopOpening() end
+	if index <= 0 then return stopOpening() end
 	local invoiceType, itemName, playerName, bid, buyout, deposit, consignment = GetInboxInvoiceInfo(index);
-  local total = (buyout + deposit - consignment) / 10000; --only handle in gold amounts
+  local total = math.floor((buyout + deposit - consignment) / 10000); --only handle in gold amounts
 
 	if total <= limit then
 		TakeInboxMoney(index)
     print(total);
+  else
+    local items = GetInboxNumItems()
+    if items > 1 and index < items + 1 then
+      return openMail(index-1)
+    end
 	end
+
 	local items = GetInboxNumItems()
 	if items > 1 and index < items + 1 then
 		lastopened = index
 		t = 0
 		frame:SetScript("OnUpdate", waitForMail)
 	else
-		stopOpening()
+		return stopOpening()
 	end
 end
 
@@ -55,6 +61,7 @@ end
 
 function stopOpening()
   print("GoldTaker finished")
+  do return end
 end
 
 SLASH_GOLDTAKER1, SLASH_GOLDTAKER2 = '/goldtaker', '/gt';
