@@ -11,7 +11,7 @@ function events:MAIL_SHOW()
 end
 
 function events:MAIL_CLOSED()
-	print("GoldTaker sleeping")
+	--print("GoldTaker sleeping")
 end
 
 frame:SetScript("OnEvent", function(self, event, ...)
