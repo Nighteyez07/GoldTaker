@@ -42,8 +42,6 @@ function openMail(index)
   local copperTotal = buyout + deposit - consignment;
   local total = math.floor((buyout + deposit - consignment) / 10000); --only handle in gold amounts
 
-  print("index = " .. index .. ". invoiceType = ")
-
   if total <= limit and invoiceType == "seller" then
     attempt = 0
     takeMoney(index) 
