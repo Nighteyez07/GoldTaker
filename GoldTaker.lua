@@ -7,6 +7,10 @@ local limit = 0
 local debug = false
 local mailBoxOpen = false
 
+function events:ADDON_LOADED()
+  print("GoldTaker loaded")
+end
+
 function events:MAIL_SHOW()
   mailBoxOpen = true;
   CheckInbox();
@@ -28,10 +32,7 @@ end
 
 function openAll()
   currentMailCount, totalMailCount = GetInboxNumItems()
-  if currentMailCount <= 50 then 
-    print("GoldTaker: process cancelled, must have more than 50 mail to run")
-    return 
-  end
+  if currentMailCount == 0 then return end
   dPrint("totalMailCount = " .. totalMailCount)
   openMail(GetInboxNumItems())
 end
