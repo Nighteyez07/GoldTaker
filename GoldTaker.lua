@@ -8,7 +8,7 @@ local debug = false
 local mailBoxOpen = false
 
 function events:ADDON_LOADED()
-  print("GoldTaker loaded")
+  --print("GoldTaker loaded")
 end
 
 function events:MAIL_SHOW()
