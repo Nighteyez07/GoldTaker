@@ -1,5 +1,7 @@
 # GoldTaker
 
+https://wow.curseforge.com/projects/goldtaker
+
 ## Phase 1 :: Base
 1. Command line actions only  (/GT {Gold_Limit}; /GoldTaker {Gold_Limit})
 2. Upon opening Mailbox indicate addon ready for use (print message to screen)
